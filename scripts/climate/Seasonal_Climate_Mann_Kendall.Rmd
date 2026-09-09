@@ -1,0 +1,409 @@
+
+```{r}
+library(terra)
+library(modifiedmk)
+
+climate_dir <- "~/SeasonalTrendsEdited/data/TerraClimate"
+out_dir <- "~/SeasonalTrendsEdited/output"
+
+climate_stacks <- list(
+  precipitation = list(
+    long = rast(
+      file.path(
+        climate_dir,
+        "long_season_precipitation_1997_2024.tif"
+      )
+    ),
+    short = rast(
+      file.path(
+        climate_dir,
+        "short_season_precipitation_1997_2024.tif"
+      )
+    )
+  ),
+
+  temperature = list(
+    long = rast(
+      file.path(
+        climate_dir,
+        "long_season_temperature_1997_2024.tif"
+      )
+    ),
+    short = rast(
+      file.path(
+        climate_dir,
+        "short_season_temperature_1997_2024.tif"
+      )
+    )
+  ),
+
+  solar_radiation = list(
+    long = rast(
+      file.path(
+        climate_dir,
+        "long_season_solar_radiation_1997_2024.tif"
+      )
+    ),
+    short = rast(
+      file.path(
+        climate_dir,
+        "short_season_solar_radiation_1997_2024.tif"
+      )
+    )
+  ),
+
+  vpd = list(
+    long = rast(
+      file.path(
+        climate_dir,
+        "long_season_vpd_1997_2024.tif"
+      )
+    ),
+    short = rast(
+      file.path(
+        climate_dir,
+        "short_season_vpd_1997_2024.tif"
+      )
+    )
+  ),
+
+  soil_moisture = list(
+    long = rast(
+      file.path(
+        climate_dir,
+        "long_season_soil_moisture_1997_2024.tif"
+      )
+    ),
+    short = rast(
+      file.path(
+        climate_dir,
+        "short_season_soil_moisture_1997_2024.tif"
+      )
+    )
+  )
+)
+
+
+# Ordinary Mann-Kendall + Sen's slope
+ordinary_mk_fun <- function(x) {
+
+  if (all(is.na(x))) {
+    return(c(
+      slope = NA_real_,
+      pvalue = NA_real_
+    ))
+  }
+
+  x <- x[!is.na(x)]
+
+  if (length(x) < 10) {
+    return(c(
+      slope = NA_real_,
+      pvalue = NA_real_
+    ))
+  }
+
+  mk <- try(
+    suppressWarnings(
+      modifiedmk::mkttest(x)
+    ),
+    silent = TRUE
+  )
+
+  if (inherits(mk, "try-error")) {
+    return(c(
+      slope = NA_real_,
+      pvalue = NA_real_
+    ))
+  }
+
+  # [[2]] = Sen's slope
+  # [[5]] = ordinary MK p-value
+  slope <- as.numeric(
+    mk[[2]]
+  )
+
+  pvalue <- as.numeric(
+    mk[[5]]
+  )
+
+  if (!is.finite(slope)) {
+    slope <- NA_real_
+  }
+
+  if (!is.finite(pvalue)) {
+    pvalue <- NA_real_
+  }
+
+  return(c(
+    slope = slope,
+    pvalue = pvalue
+  ))
+}
+
+
+# Hamed-Rao modified Mann-Kendall + Sen's slope
+modified_mk_fun <- function(x) {
+
+  if (all(is.na(x))) {
+    return(c(
+      slope = NA_real_,
+      pvalue = NA_real_
+    ))
+  }
+
+  x <- x[!is.na(x)]
+
+  if (length(x) < 10) {
+    return(c(
+      slope = NA_real_,
+      pvalue = NA_real_
+    ))
+  }
+
+  mk <- try(
+    suppressWarnings(
+      modifiedmk::mmkh3lag(x)
+    ),
+    silent = TRUE
+  )
+
+  if (inherits(mk, "try-error")) {
+    return(c(
+      slope = NA_real_,
+      pvalue = NA_real_
+    ))
+  }
+
+  # [[7]] = Sen's slope
+  # [[2]] = corrected p-value
+  slope <- as.numeric(
+    mk[[7]]
+  )
+
+  pvalue <- as.numeric(
+    mk[[2]]
+  )
+
+  if (!is.finite(slope)) {
+    slope <- NA_real_
+  }
+
+  if (!is.finite(pvalue)) {
+    pvalue <- NA_real_
+  }
+
+  return(c(
+    slope = slope,
+    pvalue = pvalue
+  ))
+}
+
+
+# Climate trend classification
+# 1 = significant decrease
+# 2 = no significant trend
+# 3 = significant increase
+
+trend_class_fun <- function(x) {
+
+  slope <- x[1]
+  pvalue <- x[2]
+
+  if (is.na(slope) || is.na(pvalue)) {
+    return(NA_real_)
+  }
+
+  if (pvalue < 0.05 && slope < 0) {
+    return(1)
+  }
+
+  if (pvalue < 0.05 && slope > 0) {
+    return(3)
+  }
+
+  return(2)
+}
+
+
+mk_methods <- data.frame(
+  variable = c(
+    "precipitation",
+    "precipitation",
+    "temperature",
+    "temperature",
+    "solar_radiation",
+    "solar_radiation",
+    "vpd",
+    "vpd",
+    "soil_moisture",
+    "soil_moisture"
+  ),
+
+  season = c(
+    "long",
+    "short",
+    "long",
+    "short",
+    "long",
+    "short",
+    "long",
+    "short",
+    "long",
+    "short"
+  ),
+
+  method = c(
+    "ordinary",
+    "ordinary",
+    "ordinary",
+    "ordinary",
+    "ordinary",
+    "ordinary",
+    "modified",
+    "ordinary",
+    "ordinary",
+    "ordinary"
+  )
+)
+
+
+all_freq <- list()
+
+for (i in seq_len(nrow(mk_methods))) {
+
+  variable <- mk_methods$variable[i]
+  season <- mk_methods$season[i]
+  method <- mk_methods$method[i]
+
+  x <- climate_stacks[[variable]][[season]]
+
+  cat(
+    "\nRunning",
+    variable,
+    "-",
+    season,
+    "-",
+    method,
+    "MK\n"
+  )
+
+  if (method == "modified") {
+
+    mk_result <- app(
+      x,
+      fun = modified_mk_fun
+    )
+
+  } else {
+
+    mk_result <- app(
+      x,
+      fun = ordinary_mk_fun
+    )
+  }
+
+  names(mk_result) <- c(
+    "Sen_slope",
+    "p_value"
+  )
+
+  writeRaster(
+    mk_result,
+    file.path(
+      out_dir,
+      paste0(
+        season,
+        "_season_",
+        variable,
+        "_MK_results.tif"
+      )
+    ),
+    overwrite = TRUE,
+    wopt = list(
+      datatype = "FLT4S",
+      filetype = "GTiff"
+    )
+  )
+
+  trend_class <- app(
+    mk_result,
+    fun = trend_class_fun
+  )
+
+  names(trend_class) <- "Trend_class"
+
+  writeRaster(
+    trend_class,
+    file.path(
+      out_dir,
+      paste0(
+        season,
+        "_season_",
+        variable,
+        "_MK_trend_class.tif"
+      )
+    ),
+    overwrite = TRUE
+  )
+
+  f <- freq(trend_class)
+
+  f <- f[
+    !is.na(f$value),
+  ]
+
+  f$percentage <-
+    f$count /
+    sum(f$count) * 100
+
+  f$variable <- variable
+  f$season <- season
+  f$method <- method
+
+  all_freq[[paste(variable, season, sep = "_")]] <- f
+
+  print(f)
+}
+
+
+mk_summary <- do.call(
+  rbind,
+  all_freq
+)
+
+mk_summary$class <- ifelse(
+  mk_summary$value == 1,
+  "Significant decrease",
+  ifelse(
+    mk_summary$value == 2,
+    "No significant trend",
+    "Significant increase"
+  )
+)
+
+mk_summary <- mk_summary[
+  ,
+  c(
+    "variable",
+    "season",
+    "method",
+    "value",
+    "class",
+    "count",
+    "percentage"
+  )
+]
+
+write.csv(
+  mk_summary,
+  file.path(
+    out_dir,
+    "climate_MK_class_percentages.csv"
+  ),
+  row.names = FALSE
+)
+
+print(mk_summary)
+```
+

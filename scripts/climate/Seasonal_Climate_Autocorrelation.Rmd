@@ -1,0 +1,163 @@
+
+```{r}
+library(terra)
+
+climate_dir <- "~/SeasonalTrendsEdited/data/TerraClimate"
+
+climate_stacks <- list(
+
+  precipitation = list(
+    long = rast(
+      file.path(
+        climate_dir,
+        "long_season_precipitation_1997_2024.tif"
+      )
+    ),
+    short = rast(
+      file.path(
+        climate_dir,
+        "short_season_precipitation_1997_2024.tif"
+      )
+    )
+  ),
+
+  temperature = list(
+    long = rast(
+      file.path(
+        climate_dir,
+        "long_season_temperature_1997_2024.tif"
+      )
+    ),
+    short = rast(
+      file.path(
+        climate_dir,
+        "short_season_temperature_1997_2024.tif"
+      )
+    )
+  ),
+
+  solar_radiation = list(
+    long = rast(
+      file.path(
+        climate_dir,
+        "long_season_solar_radiation_1997_2024.tif"
+      )
+    ),
+    short = rast(
+      file.path(
+        climate_dir,
+        "short_season_solar_radiation_1997_2024.tif"
+      )
+    )
+  ),
+
+  vpd = list(
+    long = rast(
+      file.path(
+        climate_dir,
+        "long_season_vpd_1997_2024.tif"
+      )
+    ),
+    short = rast(
+      file.path(
+        climate_dir,
+        "short_season_vpd_1997_2024.tif"
+      )
+    )
+  ),
+
+  soil_moisture = list(
+    long = rast(
+      file.path(
+        climate_dir,
+        "long_season_soil_moisture_1997_2024.tif"
+      )
+    ),
+    short = rast(
+      file.path(
+        climate_dir,
+        "short_season_soil_moisture_1997_2024.tif"
+      )
+    )
+  )
+)
+
+
+acf_fun <- function(x) {
+
+  x_mean <- global(
+    x,
+    "mean",
+    na.rm = TRUE
+  )[, 1]
+
+  x_acf <- acf(
+    x_mean,
+    lag.max = 3,
+    plot = FALSE
+  )$acf[2:4]
+
+  n <- length(x_mean)
+
+  acf_limit <- 1.96 / sqrt(n)
+
+  data.frame(
+    lag = 1:3,
+    acf = as.numeric(x_acf),
+    significant =
+      abs(as.numeric(x_acf)) > acf_limit
+  )
+}
+
+
+acf_results <- do.call(
+  rbind,
+  lapply(
+    names(climate_stacks),
+    function(variable) {
+
+      do.call(
+        rbind,
+        lapply(
+          c("long", "short"),
+          function(season) {
+
+            result <- acf_fun(
+              climate_stacks[[variable]][[season]]
+            )
+
+            result$variable <- variable
+            result$season <- season
+
+            result
+          }
+        )
+      )
+    }
+  )
+)
+
+acf_results <- acf_results[
+  ,
+  c(
+    "variable",
+    "season",
+    "lag",
+    "acf",
+    "significant"
+  )
+]
+
+print(acf_results)
+
+acf_limit <- 1.96 / sqrt(28)
+
+print(acf_limit)
+
+write.csv(
+  acf_results,
+  "~/SeasonalTrendsEdited/output/climate_ACF_results.csv",
+  row.names = FALSE
+)
+```
+

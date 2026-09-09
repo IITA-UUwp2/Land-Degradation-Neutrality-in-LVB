@@ -1,0 +1,293 @@
+
+```{r}
+library(terra)
+library(Rlibeemd)
+library(EMD)
+library(imputeTS)
+
+source("~/SeasonalTrendsEdited/scripts/EEMD_trend_fun.r")
+
+climate_dir <- "~/SeasonalTrendsEdited/data/TerraClimate"
+out_dir <- "~/SeasonalTrendsEdited/output"
+
+climate_stacks <- list(
+  precipitation = list(
+    long = rast(file.path(
+      climate_dir,
+      "long_season_precipitation_1997_2024.tif"
+    )),
+    short = rast(file.path(
+      climate_dir,
+      "short_season_precipitation_1997_2024.tif"
+    ))
+  ),
+
+  temperature = list(
+    long = rast(file.path(
+      climate_dir,
+      "long_season_temperature_1997_2024.tif"
+    )),
+    short = rast(file.path(
+      climate_dir,
+      "short_season_temperature_1997_2024.tif"
+    ))
+  ),
+
+  solar_radiation = list(
+    long = rast(file.path(
+      climate_dir,
+      "long_season_solar_radiation_1997_2024.tif"
+    )),
+    short = rast(file.path(
+      climate_dir,
+      "short_season_solar_radiation_1997_2024.tif"
+    ))
+  ),
+
+  vpd = list(
+    long = rast(file.path(
+      climate_dir,
+      "long_season_vpd_1997_2024.tif"
+    )),
+    short = rast(file.path(
+      climate_dir,
+      "short_season_vpd_1997_2024.tif"
+    ))
+  ),
+
+  soil_moisture = list(
+    long = rast(file.path(
+      climate_dir,
+      "long_season_soil_moisture_1997_2024.tif"
+    )),
+    short = rast(file.path(
+      climate_dir,
+      "short_season_soil_moisture_1997_2024.tif"
+    ))
+  )
+)
+
+para <- list(
+  factor = 1,
+  start = c(1997, 1),
+  frequency = 1,
+  ensemble_size = 100,
+  noise_strength = 0.2,
+  S_number = 4,
+  num_siftings = 50,
+  fill_value = NA,
+  out.list = FALSE
+)
+
+years <- 1997:2024
+
+eemd_names <- c(
+  paste0("Residual_", years),
+  paste0("TrendAccum_", years),
+  paste0("Rate_", years),
+  "trend_class",
+  "break_time",
+  "accumulated_before",
+  "accumulated_after",
+  "mean_rate_before",
+  "mean_rate_after"
+)
+
+class_labels <- data.frame(
+  ID = 1:4,
+  class = c(
+    "Monotonic decrease",
+    "Monotonic increase",
+    "Increase to decrease",
+    "Decrease to increase"
+  )
+)
+
+eemd_summary <- list()
+breakpoint_summary <- list()
+eemd_outputs <- list()
+
+for (variable in names(climate_stacks)) {
+
+  for (season in c("long", "short")) {
+
+    cat(
+      "\nRunning EEMD:",
+      variable,
+      "-",
+      season,
+      "\n"
+    )
+
+    x <- climate_stacks[[variable]][[season]]
+
+    eemd_result <- app(
+      x,
+      fun = EEMD_trend_fun_at_pixel,
+      para = para
+    )
+
+    names(eemd_result) <- eemd_names
+
+    full_file <- file.path(
+      out_dir,
+      paste0(
+        season,
+        "_season_",
+        variable,
+        "_EEMD_full_1997_2024.tif"
+      )
+    )
+
+    writeRaster(
+      eemd_result,
+      full_file,
+      overwrite = TRUE,
+      wopt = list(
+        datatype = "FLT4S",
+        filetype = "GTiff"
+      )
+    )
+
+    eemd_class <- eemd_result[["trend_class"]]
+
+    f <- freq(eemd_class)
+
+    f <- f[!is.na(f$value), ]
+
+    f$percentage <- f$count / sum(f$count) * 100
+    f$variable <- variable
+    f$season <- season
+
+    f$class <- c(
+      "Monotonic decrease",
+      "Monotonic increase",
+      "Increase to decrease",
+      "Decrease to increase"
+    )[f$value]
+
+    eemd_summary[[paste(variable, season, sep = "_")]] <- f
+
+    eemd_class_factor <- as.factor(eemd_class)
+
+    levels(eemd_class_factor) <- class_labels
+
+    class_file <- file.path(
+      out_dir,
+      paste0(
+        season,
+        "_season_",
+        variable,
+        "_EEMD_trend_class.tif"
+      )
+    )
+
+    writeRaster(
+      eemd_class_factor,
+      class_file,
+      overwrite = TRUE
+    )
+
+    break_time <- eemd_result[["break_time"]]
+
+    break_time[break_time == -999] <- NA
+
+    break_file <- file.path(
+      out_dir,
+      paste0(
+        season,
+        "_season_",
+        variable,
+        "_EEMD_breakpoint_year.tif"
+      )
+    )
+
+    writeRaster(
+      break_time,
+      break_file,
+      overwrite = TRUE
+    )
+
+    bp <- freq(break_time)
+
+    bp <- bp[!is.na(bp$value), ]
+
+    if (nrow(bp) > 0) {
+
+      bp$percentage <- bp$count / sum(bp$count) * 100
+      bp$variable <- variable
+      bp$season <- season
+
+      breakpoint_summary[[paste(variable, season, sep = "_")]] <- bp
+    }
+
+    eemd_outputs[[paste(variable, season, sep = "_")]] <- list(
+      full = eemd_result,
+      class = eemd_class_factor,
+      breakpoint = break_time
+    )
+
+    print(f)
+  }
+}
+
+climate_eemd_summary <- do.call(
+  rbind,
+  eemd_summary
+)
+
+climate_eemd_summary <- climate_eemd_summary[
+  ,
+  c(
+    "variable",
+    "season",
+    "value",
+    "class",
+    "count",
+    "percentage"
+  )
+]
+
+write.csv(
+  climate_eemd_summary,
+  file.path(
+    out_dir,
+    "climate_EEMD_class_percentages.csv"
+  ),
+  row.names = FALSE
+)
+
+print(climate_eemd_summary)
+
+climate_breakpoints <- do.call(
+  rbind,
+  breakpoint_summary
+)
+
+climate_breakpoints <- climate_breakpoints[
+  ,
+  c(
+    "variable",
+    "season",
+    "value",
+    "count",
+    "percentage"
+  )
+]
+
+names(climate_breakpoints)[
+  names(climate_breakpoints) == "value"
+] <- "year"
+
+write.csv(
+  climate_breakpoints,
+  file.path(
+    out_dir,
+    "climate_EEMD_breakpoint_frequencies.csv"
+  ),
+  row.names = FALSE
+)
+
+print(climate_breakpoints)
+```
+
