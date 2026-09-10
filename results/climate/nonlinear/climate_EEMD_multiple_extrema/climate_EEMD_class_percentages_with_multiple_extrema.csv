@@ -1,0 +1,51 @@
+"variable","season","class","class_name","pixels","percentage"
+"precipitation","long",1,"Monotonic decrease",26,1.32382892057026
+"precipitation","long",2,"Monotonic increase",287,14.6130346232179
+"precipitation","long",3,"Increase to decrease",1317,67.0570264765784
+"precipitation","long",4,"Decrease to increase",281,14.3075356415479
+"precipitation","long",5,"Multiple extrema",53,2.69857433808554
+"precipitation","short",1,"Monotonic decrease",144,7.33571064696893
+"precipitation","short",2,"Monotonic increase",302,15.3846153846154
+"precipitation","short",3,"Increase to decrease",1258,64.0855832908813
+"precipitation","short",4,"Decrease to increase",83,4.22822210901681
+"precipitation","short",5,"Multiple extrema",176,8.96586856851757
+"temperature","long",1,"Monotonic decrease",0,0
+"temperature","long",2,"Monotonic increase",954,48.5743380855397
+"temperature","long",3,"Increase to decrease",0,0
+"temperature","long",4,"Decrease to increase",11,0.560081466395112
+"temperature","long",5,"Multiple extrema",999,50.8655804480652
+"temperature","short",1,"Monotonic decrease",0,0
+"temperature","short",2,"Monotonic increase",505,25.7259296994396
+"temperature","short",3,"Increase to decrease",1458,74.2740703005604
+"temperature","short",4,"Decrease to increase",0,0
+"temperature","short",5,"Multiple extrema",0,0
+"solar_radiation","long",1,"Monotonic decrease",0,0
+"solar_radiation","long",2,"Monotonic increase",74,3.76782077393075
+"solar_radiation","long",3,"Increase to decrease",0,0
+"solar_radiation","long",4,"Decrease to increase",1853,94.3482688391039
+"solar_radiation","long",5,"Multiple extrema",37,1.88391038696538
+"solar_radiation","short",1,"Monotonic decrease",0,0
+"solar_radiation","short",2,"Monotonic increase",0,0
+"solar_radiation","short",3,"Increase to decrease",0,0
+"solar_radiation","short",4,"Decrease to increase",1963,100
+"solar_radiation","short",5,"Multiple extrema",0,0
+"vpd","long",1,"Monotonic decrease",0,0
+"vpd","long",2,"Monotonic increase",502,25.5600814663951
+"vpd","long",3,"Increase to decrease",194,9.87780040733197
+"vpd","long",4,"Decrease to increase",1185,60.3360488798371
+"vpd","long",5,"Multiple extrema",83,4.22606924643584
+"vpd","short",1,"Monotonic decrease",115,5.85838003056546
+"vpd","short",2,"Monotonic increase",165,8.40550178298523
+"vpd","short",3,"Increase to decrease",271,13.8053998981151
+"vpd","short",4,"Decrease to increase",1401,71.3703515028018
+"vpd","short",5,"Multiple extrema",11,0.560366785532348
+"soil_moisture","long",1,"Monotonic decrease",142,7.23014256619145
+"soil_moisture","long",2,"Monotonic increase",414,21.0794297352342
+"soil_moisture","long",3,"Increase to decrease",692,35.234215885947
+"soil_moisture","long",4,"Decrease to increase",686,34.928716904277
+"soil_moisture","long",5,"Multiple extrema",30,1.52749490835031
+"soil_moisture","short",1,"Monotonic decrease",66,3.36220071319409
+"soil_moisture","short",2,"Monotonic increase",318,16.1996943453897
+"soil_moisture","short",3,"Increase to decrease",906,46.1538461538462
+"soil_moisture","short",4,"Decrease to increase",587,29.903209373408
+"soil_moisture","short",5,"Multiple extrema",86,4.381049414162
