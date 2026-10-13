@@ -1,0 +1,2378 @@
+{
+  "type": "FeatureCollection",
+  "links": [
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+    },
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "https://stac.opengeohub.org/v1/"
+    },
+    {
+      "rel": "self",
+      "type": "application/geo+json",
+      "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric/items"
+    }
+  ],
+  "features": [
+    {
+      "id": "land.cover_ifad.mcdt_go_landmetric_20240101_20241231",
+      "bbox": [
+        -180,
+        -60,
+        180,
+        84
+      ],
+      "type": "Feature",
+      "title": "land.cover_ifad.mcdt_go_landmetric_20240101_20241231",
+      "assets": {
+        "thumbnail": {
+          "href": "https://titiler.opengeohub.org/cog/preview?url=https%3A%2F%2Fs3.ecodatacube.eu%2Fifad%2Fland.cover_ifad.mcdt_c_30m_s_20240101_20241231_go_epsg.4326_v1.2.tif&max_size=1200&colormap=%7B%221%22%3A%22%23d73027%22%2C%222%22%3A%22%23ffd700%22%2C%223%22%3A%22%23ffd700%22%2C%224%22%3A%22%23ffd700%22%2C%225%22%3A%22%23ffd700%22%2C%226%22%3A%22%23ffd700%22%2C%227%22%3A%22%23ffd700%22%2C%228%22%3A%22%23ffd700%22%2C%229%22%3A%22%23e49f2e%22%2C%2210%22%3A%22%23e49f2e%22%2C%2211%22%3A%22%231b9e77%22%2C%2212%22%3A%22%231b9e77%22%2C%2213%22%3A%22%231b9e77%22%2C%2214%22%3A%22%231b9e77%22%2C%2215%22%3A%22%231b9e77%22%2C%2216%22%3A%22%231b9e77%22%2C%2217%22%3A%22%231b9e77%22%2C%2218%22%3A%22%231b9e77%22%2C%2219%22%3A%22%231b9e77%22%2C%2220%22%3A%22%231b9e77%22%2C%2221%22%3A%22%231b9e77%22%2C%2222%22%3A%22%231b9e77%22%2C%2223%22%3A%22%231b9e77%22%2C%2224%22%3A%22%231b9e77%22%2C%2225%22%3A%22%23e67e22%22%2C%2226%22%3A%22%23c0a46b%22%2C%2227%22%3A%22%23c0a46b%22%2C%2228%22%3A%22%23c0a46b%22%2C%2229%22%3A%22%23c0a46b%22%2C%2230%22%3A%22%23c0a46b%22%2C%2231%22%3A%22%231abc9c%22%2C%2232%22%3A%22%231abc9c%22%2C%2233%22%3A%22%231abc9c%22%2C%2234%22%3A%22%234169e1%22%2C%2235%22%3A%22%234169e1%22%2C%2236%22%3A%22%236c5ce7%22%2C%2237%22%3A%22%236c5ce7%22%2C%2238%22%3A%22%236c5ce7%22%2C%2239%22%3A%22%23add8e6%22%7D",
+          "type": "image/png",
+          "roles": [
+            "thumbnail"
+          ],
+          "file:size": 129687,
+          "file:checksum": "d50110c4ea59ee84c0cc391197114290f47f3d"
+        },
+        "land.cover_ifad.mcdt_qml_1": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv1_v2.0.qml",
+          "type": "application/vnd.QGIS.qml+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 1, QGIS style",
+          "file:size": 11735,
+          "style:type": "qml",
+          "style:scale": true,
+          "file:checksum": "d5011005ca05e94eec4a25070a186556bd3906",
+          "style:variant": "default",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_qml_2": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv2_v2.0.qml",
+          "type": "application/vnd.QGIS.qml+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 2, QGIS style",
+          "file:size": 11718,
+          "style:type": "qml",
+          "style:scale": false,
+          "file:checksum": "d501107b33dacffca8a861efb8c9655759d1b1",
+          "style:variant": "alternative",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_sld_1": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv1_v2.0.sld",
+          "type": "application/vnd.OGC.sld+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 1, OGC style",
+          "file:size": 5110,
+          "style:type": "sld",
+          "style:scale": true,
+          "file:checksum": "d50110a0cced24c8f8b25b22fd7e8ee0e05a4e",
+          "style:variant": "default",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_sld_2": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv2_v2.0.sld",
+          "type": "application/vnd.OGC.sld+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 2, OGC style",
+          "file:size": 5071,
+          "style:type": "sld",
+          "style:scale": false,
+          "file:checksum": "d5011073d9fe38e570fd66eca83e495140940a",
+          "style:variant": "alternative",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_c_30m_s": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_c_30m_s_20240101_20241231_go_epsg.4326_v1.2.tif",
+          "main": true,
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "bands": [
+            {
+              "nodata": 255,
+              "data_type": "uint8",
+              "raster:scale": 1,
+              "raster:offset": 0,
+              "raster:bits_per_sample": 8,
+              "raster:spatial_resolution": 0.0002
+            }
+          ],
+          "roles": [
+            "data"
+          ],
+          "file:size": 44788342403,
+          "style:assets": [
+            "land.cover_ifad.mcdt_qml_1",
+            "land.cover_ifad.mcdt_qml_2",
+            "land.cover_ifad.mcdt_sld_1",
+            "land.cover_ifad.mcdt_sld_2"
+          ],
+          "file:checksum": "d50110ac079529d3eb1085e53dea2b92c3e6d9",
+          "style:default": [
+            "land.cover_ifad.mcdt_qml_1",
+            "land.cover_ifad.mcdt_sld_1"
+          ],
+          "cube:variables": {
+            "data": {
+              "type": "data",
+              "unit": "hard class",
+              "dimensions": [
+                "y",
+                "x"
+              ],
+              "description": "data"
+            }
+          },
+          "cube:dimensions": {
+            "x": {
+              "axis": "x",
+              "type": "spatial",
+              "unit": "degree",
+              "extent": [
+                -180,
+                180
+              ],
+              "reference_system": 4326
+            },
+            "y": {
+              "axis": "y",
+              "type": "spatial",
+              "unit": "degree",
+              "extent": [
+                -60,
+                84
+              ],
+              "reference_system": 4326
+            }
+          },
+          "classification:classes": [
+            {
+              "name": "1_built_up",
+              "title": "1. Built-up",
+              "value": 1,
+              "color_hint": "D73027"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 2,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 3,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 4,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 5,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 6,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 7,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 8,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "3_grassland",
+              "title": "3. Grassland",
+              "value": 9,
+              "color_hint": "E49F2E"
+            },
+            {
+              "name": "3_grassland",
+              "title": "3. Grassland",
+              "value": 10,
+              "color_hint": "E49F2E"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 11,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 12,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 13,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 14,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 15,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 16,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 17,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 18,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 19,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 20,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 21,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 22,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 23,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 24,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "5_shrubland_and_heathland",
+              "title": "5. Shrubland and heathland",
+              "value": 25,
+              "color_hint": "E67E22"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 26,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 27,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 28,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 29,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 30,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 31,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 32,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 33,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "8_water_bodies",
+              "title": "8. Water bodies",
+              "value": 34,
+              "color_hint": "4169E1"
+            },
+            {
+              "name": "8_water_bodies",
+              "title": "8. Water bodies",
+              "value": 35,
+              "color_hint": "4169E1"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 36,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 37,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 38,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "10_aquaculture",
+              "title": "10. Aquaculture",
+              "value": 39,
+              "color_hint": "ADD8E6"
+            }
+          ]
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -180,
+              -60
+            ],
+            [
+              -180,
+              84
+            ],
+            [
+              180,
+              84
+            ],
+            [
+              180,
+              -60
+            ],
+            [
+              -180,
+              -60
+            ]
+          ]
+        ]
+      },
+      "collection": "land.cover_ifad.mcdt_go_landmetric",
+      "properties": {
+        "gsd": 30,
+        "title": "land.cover_ifad.mcdt_go_landmetric_20240101_20241231",
+        "region": "global",
+        "product": "land.cover_ifad.mcdt",
+        "version": "v1.2",
+        "datetime": "2024-01-01T00:00:00Z",
+        "proj:bbox": [
+          -180,
+          -60,
+          180,
+          84
+        ],
+        "proj:epsg": 4326,
+        "catalog_id": [
+          "landmetric"
+        ],
+        "proj:shape": [
+          576000,
+          1440000
+        ],
+        "end_datetime": "2024-12-31T00:00:00Z",
+        "proj:transform": [
+          0.0002,
+          0,
+          -180,
+          0,
+          -0.0002,
+          84,
+          0,
+          0,
+          1
+        ],
+        "start_datetime": "2024-01-01T00:00:00Z"
+      },
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+        "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+        "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+        "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/raster/v2.0.0/schema.json"
+      ],
+      "links": [
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+        },
+        {
+          "rel": "parent",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+        },
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/"
+        },
+        {
+          "rel": "self",
+          "type": "application/geo+json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric/items/land.cover_ifad.mcdt_go_landmetric_20240101_20241231"
+        }
+      ]
+    },
+    {
+      "id": "land.cover_ifad.mcdt_go_landmetric_20230101_20231231",
+      "bbox": [
+        -180,
+        -60,
+        180,
+        84
+      ],
+      "type": "Feature",
+      "title": "land.cover_ifad.mcdt_go_landmetric_20230101_20231231",
+      "assets": {
+        "thumbnail": {
+          "href": "https://titiler.opengeohub.org/cog/preview?url=https%3A%2F%2Fs3.ecodatacube.eu%2Fifad%2Fland.cover_ifad.mcdt_c_30m_s_20230101_20231231_go_epsg.4326_v1.2.tif&max_size=1200&colormap=%7B%221%22%3A%22%23d73027%22%2C%222%22%3A%22%23ffd700%22%2C%223%22%3A%22%23ffd700%22%2C%224%22%3A%22%23ffd700%22%2C%225%22%3A%22%23ffd700%22%2C%226%22%3A%22%23ffd700%22%2C%227%22%3A%22%23ffd700%22%2C%228%22%3A%22%23ffd700%22%2C%229%22%3A%22%23e49f2e%22%2C%2210%22%3A%22%23e49f2e%22%2C%2211%22%3A%22%231b9e77%22%2C%2212%22%3A%22%231b9e77%22%2C%2213%22%3A%22%231b9e77%22%2C%2214%22%3A%22%231b9e77%22%2C%2215%22%3A%22%231b9e77%22%2C%2216%22%3A%22%231b9e77%22%2C%2217%22%3A%22%231b9e77%22%2C%2218%22%3A%22%231b9e77%22%2C%2219%22%3A%22%231b9e77%22%2C%2220%22%3A%22%231b9e77%22%2C%2221%22%3A%22%231b9e77%22%2C%2222%22%3A%22%231b9e77%22%2C%2223%22%3A%22%231b9e77%22%2C%2224%22%3A%22%231b9e77%22%2C%2225%22%3A%22%23e67e22%22%2C%2226%22%3A%22%23c0a46b%22%2C%2227%22%3A%22%23c0a46b%22%2C%2228%22%3A%22%23c0a46b%22%2C%2229%22%3A%22%23c0a46b%22%2C%2230%22%3A%22%23c0a46b%22%2C%2231%22%3A%22%231abc9c%22%2C%2232%22%3A%22%231abc9c%22%2C%2233%22%3A%22%231abc9c%22%2C%2234%22%3A%22%234169e1%22%2C%2235%22%3A%22%234169e1%22%2C%2236%22%3A%22%236c5ce7%22%2C%2237%22%3A%22%236c5ce7%22%2C%2238%22%3A%22%236c5ce7%22%2C%2239%22%3A%22%23add8e6%22%7D",
+          "type": "image/png",
+          "roles": [
+            "thumbnail"
+          ],
+          "file:size": 128946,
+          "file:checksum": "d501101ff9195a2011627388923a848502afed"
+        },
+        "land.cover_ifad.mcdt_qml_1": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv1_v2.0.qml",
+          "type": "application/vnd.QGIS.qml+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 1, QGIS style",
+          "file:size": 11735,
+          "style:type": "qml",
+          "style:scale": true,
+          "file:checksum": "d5011005ca05e94eec4a25070a186556bd3906",
+          "style:variant": "default",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_qml_2": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv2_v2.0.qml",
+          "type": "application/vnd.QGIS.qml+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 2, QGIS style",
+          "file:size": 11718,
+          "style:type": "qml",
+          "style:scale": false,
+          "file:checksum": "d501107b33dacffca8a861efb8c9655759d1b1",
+          "style:variant": "alternative",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_sld_1": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv1_v2.0.sld",
+          "type": "application/vnd.OGC.sld+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 1, OGC style",
+          "file:size": 5110,
+          "style:type": "sld",
+          "style:scale": true,
+          "file:checksum": "d50110a0cced24c8f8b25b22fd7e8ee0e05a4e",
+          "style:variant": "default",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_sld_2": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv2_v2.0.sld",
+          "type": "application/vnd.OGC.sld+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 2, OGC style",
+          "file:size": 5071,
+          "style:type": "sld",
+          "style:scale": false,
+          "file:checksum": "d5011073d9fe38e570fd66eca83e495140940a",
+          "style:variant": "alternative",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_c_30m_s": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_c_30m_s_20230101_20231231_go_epsg.4326_v1.2.tif",
+          "main": true,
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "bands": [
+            {
+              "nodata": 255,
+              "data_type": "uint8",
+              "raster:scale": 1,
+              "raster:offset": 0,
+              "raster:bits_per_sample": 8,
+              "raster:spatial_resolution": 0.0002
+            }
+          ],
+          "roles": [
+            "data"
+          ],
+          "file:size": 44431998979,
+          "style:assets": [
+            "land.cover_ifad.mcdt_qml_1",
+            "land.cover_ifad.mcdt_qml_2",
+            "land.cover_ifad.mcdt_sld_1",
+            "land.cover_ifad.mcdt_sld_2"
+          ],
+          "file:checksum": "d5011067181e0f49932b7424771c7c04aacc3d",
+          "style:default": [
+            "land.cover_ifad.mcdt_qml_1",
+            "land.cover_ifad.mcdt_sld_1"
+          ],
+          "cube:variables": {
+            "data": {
+              "type": "data",
+              "unit": "hard class",
+              "dimensions": [
+                "y",
+                "x"
+              ],
+              "description": "data"
+            }
+          },
+          "cube:dimensions": {
+            "x": {
+              "axis": "x",
+              "type": "spatial",
+              "unit": "degree",
+              "extent": [
+                -180,
+                180
+              ],
+              "reference_system": 4326
+            },
+            "y": {
+              "axis": "y",
+              "type": "spatial",
+              "unit": "degree",
+              "extent": [
+                -60,
+                84
+              ],
+              "reference_system": 4326
+            }
+          },
+          "classification:classes": [
+            {
+              "name": "1_built_up",
+              "title": "1. Built-up",
+              "value": 1,
+              "color_hint": "D73027"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 2,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 3,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 4,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 5,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 6,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 7,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 8,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "3_grassland",
+              "title": "3. Grassland",
+              "value": 9,
+              "color_hint": "E49F2E"
+            },
+            {
+              "name": "3_grassland",
+              "title": "3. Grassland",
+              "value": 10,
+              "color_hint": "E49F2E"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 11,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 12,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 13,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 14,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 15,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 16,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 17,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 18,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 19,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 20,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 21,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 22,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 23,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 24,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "5_shrubland_and_heathland",
+              "title": "5. Shrubland and heathland",
+              "value": 25,
+              "color_hint": "E67E22"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 26,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 27,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 28,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 29,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 30,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 31,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 32,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 33,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "8_water_bodies",
+              "title": "8. Water bodies",
+              "value": 34,
+              "color_hint": "4169E1"
+            },
+            {
+              "name": "8_water_bodies",
+              "title": "8. Water bodies",
+              "value": 35,
+              "color_hint": "4169E1"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 36,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 37,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 38,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "10_aquaculture",
+              "title": "10. Aquaculture",
+              "value": 39,
+              "color_hint": "ADD8E6"
+            }
+          ]
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -180,
+              -60
+            ],
+            [
+              -180,
+              84
+            ],
+            [
+              180,
+              84
+            ],
+            [
+              180,
+              -60
+            ],
+            [
+              -180,
+              -60
+            ]
+          ]
+        ]
+      },
+      "collection": "land.cover_ifad.mcdt_go_landmetric",
+      "properties": {
+        "gsd": 30,
+        "title": "land.cover_ifad.mcdt_go_landmetric_20230101_20231231",
+        "region": "global",
+        "product": "land.cover_ifad.mcdt",
+        "version": "v1.2",
+        "datetime": "2023-01-01T00:00:00Z",
+        "proj:bbox": [
+          -180,
+          -60,
+          180,
+          84
+        ],
+        "proj:epsg": 4326,
+        "catalog_id": [
+          "landmetric"
+        ],
+        "proj:shape": [
+          576000,
+          1440000
+        ],
+        "end_datetime": "2023-12-31T00:00:00Z",
+        "proj:transform": [
+          0.0002,
+          0,
+          -180,
+          0,
+          -0.0002,
+          84,
+          0,
+          0,
+          1
+        ],
+        "start_datetime": "2023-01-01T00:00:00Z"
+      },
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+        "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+        "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+        "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/raster/v2.0.0/schema.json"
+      ],
+      "links": [
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+        },
+        {
+          "rel": "parent",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+        },
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/"
+        },
+        {
+          "rel": "self",
+          "type": "application/geo+json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric/items/land.cover_ifad.mcdt_go_landmetric_20230101_20231231"
+        }
+      ]
+    },
+    {
+      "id": "land.cover_ifad.mcdt_go_landmetric_20220101_20221231",
+      "bbox": [
+        -180,
+        -60,
+        180,
+        84
+      ],
+      "type": "Feature",
+      "title": "land.cover_ifad.mcdt_go_landmetric_20220101_20221231",
+      "assets": {
+        "thumbnail": {
+          "href": "https://titiler.opengeohub.org/cog/preview?url=https%3A%2F%2Fs3.ecodatacube.eu%2Fifad%2Fland.cover_ifad.mcdt_c_30m_s_20220101_20221231_go_epsg.4326_v1.2.tif&max_size=1200&colormap=%7B%221%22%3A%22%23d73027%22%2C%222%22%3A%22%23ffd700%22%2C%223%22%3A%22%23ffd700%22%2C%224%22%3A%22%23ffd700%22%2C%225%22%3A%22%23ffd700%22%2C%226%22%3A%22%23ffd700%22%2C%227%22%3A%22%23ffd700%22%2C%228%22%3A%22%23ffd700%22%2C%229%22%3A%22%23e49f2e%22%2C%2210%22%3A%22%23e49f2e%22%2C%2211%22%3A%22%231b9e77%22%2C%2212%22%3A%22%231b9e77%22%2C%2213%22%3A%22%231b9e77%22%2C%2214%22%3A%22%231b9e77%22%2C%2215%22%3A%22%231b9e77%22%2C%2216%22%3A%22%231b9e77%22%2C%2217%22%3A%22%231b9e77%22%2C%2218%22%3A%22%231b9e77%22%2C%2219%22%3A%22%231b9e77%22%2C%2220%22%3A%22%231b9e77%22%2C%2221%22%3A%22%231b9e77%22%2C%2222%22%3A%22%231b9e77%22%2C%2223%22%3A%22%231b9e77%22%2C%2224%22%3A%22%231b9e77%22%2C%2225%22%3A%22%23e67e22%22%2C%2226%22%3A%22%23c0a46b%22%2C%2227%22%3A%22%23c0a46b%22%2C%2228%22%3A%22%23c0a46b%22%2C%2229%22%3A%22%23c0a46b%22%2C%2230%22%3A%22%23c0a46b%22%2C%2231%22%3A%22%231abc9c%22%2C%2232%22%3A%22%231abc9c%22%2C%2233%22%3A%22%231abc9c%22%2C%2234%22%3A%22%234169e1%22%2C%2235%22%3A%22%234169e1%22%2C%2236%22%3A%22%236c5ce7%22%2C%2237%22%3A%22%236c5ce7%22%2C%2238%22%3A%22%236c5ce7%22%2C%2239%22%3A%22%23add8e6%22%7D",
+          "type": "image/png",
+          "roles": [
+            "thumbnail"
+          ],
+          "file:size": 128844,
+          "file:checksum": "d501105fd4fdb11374c358e5b512d8530d53f6"
+        },
+        "land.cover_ifad.mcdt_qml_1": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv1_v2.0.qml",
+          "type": "application/vnd.QGIS.qml+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 1, QGIS style",
+          "file:size": 11735,
+          "style:type": "qml",
+          "style:scale": true,
+          "file:checksum": "d5011005ca05e94eec4a25070a186556bd3906",
+          "style:variant": "default",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_qml_2": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv2_v2.0.qml",
+          "type": "application/vnd.QGIS.qml+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 2, QGIS style",
+          "file:size": 11718,
+          "style:type": "qml",
+          "style:scale": false,
+          "file:checksum": "d501107b33dacffca8a861efb8c9655759d1b1",
+          "style:variant": "alternative",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_sld_1": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv1_v2.0.sld",
+          "type": "application/vnd.OGC.sld+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 1, OGC style",
+          "file:size": 5110,
+          "style:type": "sld",
+          "style:scale": true,
+          "file:checksum": "d50110a0cced24c8f8b25b22fd7e8ee0e05a4e",
+          "style:variant": "default",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_sld_2": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv2_v2.0.sld",
+          "type": "application/vnd.OGC.sld+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 2, OGC style",
+          "file:size": 5071,
+          "style:type": "sld",
+          "style:scale": false,
+          "file:checksum": "d5011073d9fe38e570fd66eca83e495140940a",
+          "style:variant": "alternative",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_c_30m_s": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_c_30m_s_20220101_20221231_go_epsg.4326_v1.2.tif",
+          "main": true,
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "bands": [
+            {
+              "nodata": 255,
+              "data_type": "uint8",
+              "raster:scale": 1,
+              "raster:offset": 0,
+              "raster:bits_per_sample": 8,
+              "raster:spatial_resolution": 0.0002
+            }
+          ],
+          "roles": [
+            "data"
+          ],
+          "file:size": 44134532430,
+          "style:assets": [
+            "land.cover_ifad.mcdt_qml_1",
+            "land.cover_ifad.mcdt_qml_2",
+            "land.cover_ifad.mcdt_sld_1",
+            "land.cover_ifad.mcdt_sld_2"
+          ],
+          "file:checksum": "d501106711fecd8d618850616ffd07088c28ad",
+          "style:default": [
+            "land.cover_ifad.mcdt_qml_1",
+            "land.cover_ifad.mcdt_sld_1"
+          ],
+          "cube:variables": {
+            "data": {
+              "type": "data",
+              "unit": "hard class",
+              "dimensions": [
+                "y",
+                "x"
+              ],
+              "description": "data"
+            }
+          },
+          "cube:dimensions": {
+            "x": {
+              "axis": "x",
+              "type": "spatial",
+              "unit": "degree",
+              "extent": [
+                -180,
+                180
+              ],
+              "reference_system": 4326
+            },
+            "y": {
+              "axis": "y",
+              "type": "spatial",
+              "unit": "degree",
+              "extent": [
+                -60,
+                84
+              ],
+              "reference_system": 4326
+            }
+          },
+          "classification:classes": [
+            {
+              "name": "1_built_up",
+              "title": "1. Built-up",
+              "value": 1,
+              "color_hint": "D73027"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 2,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 3,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 4,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 5,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 6,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 7,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 8,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "3_grassland",
+              "title": "3. Grassland",
+              "value": 9,
+              "color_hint": "E49F2E"
+            },
+            {
+              "name": "3_grassland",
+              "title": "3. Grassland",
+              "value": 10,
+              "color_hint": "E49F2E"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 11,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 12,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 13,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 14,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 15,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 16,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 17,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 18,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 19,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 20,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 21,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 22,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 23,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 24,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "5_shrubland_and_heathland",
+              "title": "5. Shrubland and heathland",
+              "value": 25,
+              "color_hint": "E67E22"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 26,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 27,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 28,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 29,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 30,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 31,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 32,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 33,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "8_water_bodies",
+              "title": "8. Water bodies",
+              "value": 34,
+              "color_hint": "4169E1"
+            },
+            {
+              "name": "8_water_bodies",
+              "title": "8. Water bodies",
+              "value": 35,
+              "color_hint": "4169E1"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 36,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 37,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 38,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "10_aquaculture",
+              "title": "10. Aquaculture",
+              "value": 39,
+              "color_hint": "ADD8E6"
+            }
+          ]
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -180,
+              -60
+            ],
+            [
+              -180,
+              84
+            ],
+            [
+              180,
+              84
+            ],
+            [
+              180,
+              -60
+            ],
+            [
+              -180,
+              -60
+            ]
+          ]
+        ]
+      },
+      "collection": "land.cover_ifad.mcdt_go_landmetric",
+      "properties": {
+        "gsd": 30,
+        "title": "land.cover_ifad.mcdt_go_landmetric_20220101_20221231",
+        "region": "global",
+        "product": "land.cover_ifad.mcdt",
+        "version": "v1.2",
+        "datetime": "2022-01-01T00:00:00Z",
+        "proj:bbox": [
+          -180,
+          -60,
+          180,
+          84
+        ],
+        "proj:epsg": 4326,
+        "catalog_id": [
+          "landmetric"
+        ],
+        "proj:shape": [
+          576000,
+          1440000
+        ],
+        "end_datetime": "2022-12-31T00:00:00Z",
+        "proj:transform": [
+          0.0002,
+          0,
+          -180,
+          0,
+          -0.0002,
+          84,
+          0,
+          0,
+          1
+        ],
+        "start_datetime": "2022-01-01T00:00:00Z"
+      },
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+        "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+        "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+        "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/raster/v2.0.0/schema.json"
+      ],
+      "links": [
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+        },
+        {
+          "rel": "parent",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+        },
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/"
+        },
+        {
+          "rel": "self",
+          "type": "application/geo+json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric/items/land.cover_ifad.mcdt_go_landmetric_20220101_20221231"
+        }
+      ]
+    },
+    {
+      "id": "land.cover_ifad.mcdt_go_landmetric_20210101_20211231",
+      "bbox": [
+        -180,
+        -60,
+        180,
+        84
+      ],
+      "type": "Feature",
+      "title": "land.cover_ifad.mcdt_go_landmetric_20210101_20211231",
+      "assets": {
+        "thumbnail": {
+          "href": "https://titiler.opengeohub.org/cog/preview?url=https%3A%2F%2Fs3.ecodatacube.eu%2Fifad%2Fland.cover_ifad.mcdt_c_30m_s_20210101_20211231_go_epsg.4326_v1.2.tif&max_size=1200&colormap=%7B%221%22%3A%22%23d73027%22%2C%222%22%3A%22%23ffd700%22%2C%223%22%3A%22%23ffd700%22%2C%224%22%3A%22%23ffd700%22%2C%225%22%3A%22%23ffd700%22%2C%226%22%3A%22%23ffd700%22%2C%227%22%3A%22%23ffd700%22%2C%228%22%3A%22%23ffd700%22%2C%229%22%3A%22%23e49f2e%22%2C%2210%22%3A%22%23e49f2e%22%2C%2211%22%3A%22%231b9e77%22%2C%2212%22%3A%22%231b9e77%22%2C%2213%22%3A%22%231b9e77%22%2C%2214%22%3A%22%231b9e77%22%2C%2215%22%3A%22%231b9e77%22%2C%2216%22%3A%22%231b9e77%22%2C%2217%22%3A%22%231b9e77%22%2C%2218%22%3A%22%231b9e77%22%2C%2219%22%3A%22%231b9e77%22%2C%2220%22%3A%22%231b9e77%22%2C%2221%22%3A%22%231b9e77%22%2C%2222%22%3A%22%231b9e77%22%2C%2223%22%3A%22%231b9e77%22%2C%2224%22%3A%22%231b9e77%22%2C%2225%22%3A%22%23e67e22%22%2C%2226%22%3A%22%23c0a46b%22%2C%2227%22%3A%22%23c0a46b%22%2C%2228%22%3A%22%23c0a46b%22%2C%2229%22%3A%22%23c0a46b%22%2C%2230%22%3A%22%23c0a46b%22%2C%2231%22%3A%22%231abc9c%22%2C%2232%22%3A%22%231abc9c%22%2C%2233%22%3A%22%231abc9c%22%2C%2234%22%3A%22%234169e1%22%2C%2235%22%3A%22%234169e1%22%2C%2236%22%3A%22%236c5ce7%22%2C%2237%22%3A%22%236c5ce7%22%2C%2238%22%3A%22%236c5ce7%22%2C%2239%22%3A%22%23add8e6%22%7D",
+          "type": "image/png",
+          "roles": [
+            "thumbnail"
+          ],
+          "file:size": 128190,
+          "file:checksum": "d50110bf7a6ab11a48b65ad63df25616334b19"
+        },
+        "land.cover_ifad.mcdt_qml_1": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv1_v2.0.qml",
+          "type": "application/vnd.QGIS.qml+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 1, QGIS style",
+          "file:size": 11735,
+          "style:type": "qml",
+          "style:scale": true,
+          "file:checksum": "d5011005ca05e94eec4a25070a186556bd3906",
+          "style:variant": "default",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_qml_2": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv2_v2.0.qml",
+          "type": "application/vnd.QGIS.qml+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 2, QGIS style",
+          "file:size": 11718,
+          "style:type": "qml",
+          "style:scale": false,
+          "file:checksum": "d501107b33dacffca8a861efb8c9655759d1b1",
+          "style:variant": "alternative",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_sld_1": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv1_v2.0.sld",
+          "type": "application/vnd.OGC.sld+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 1, OGC style",
+          "file:size": 5110,
+          "style:type": "sld",
+          "style:scale": true,
+          "file:checksum": "d50110a0cced24c8f8b25b22fd7e8ee0e05a4e",
+          "style:variant": "default",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_sld_2": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv2_v2.0.sld",
+          "type": "application/vnd.OGC.sld+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 2, OGC style",
+          "file:size": 5071,
+          "style:type": "sld",
+          "style:scale": false,
+          "file:checksum": "d5011073d9fe38e570fd66eca83e495140940a",
+          "style:variant": "alternative",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_c_30m_s": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_c_30m_s_20210101_20211231_go_epsg.4326_v1.2.tif",
+          "main": true,
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "bands": [
+            {
+              "nodata": 255,
+              "data_type": "uint8",
+              "raster:scale": 1,
+              "raster:offset": 0,
+              "raster:bits_per_sample": 8,
+              "raster:spatial_resolution": 0.0002
+            }
+          ],
+          "roles": [
+            "data"
+          ],
+          "file:size": 44015146657,
+          "style:assets": [
+            "land.cover_ifad.mcdt_qml_1",
+            "land.cover_ifad.mcdt_qml_2",
+            "land.cover_ifad.mcdt_sld_1",
+            "land.cover_ifad.mcdt_sld_2"
+          ],
+          "file:checksum": "d50110e960b2ebadbd8177b6e847222ab3b0ef",
+          "style:default": [
+            "land.cover_ifad.mcdt_qml_1",
+            "land.cover_ifad.mcdt_sld_1"
+          ],
+          "cube:variables": {
+            "data": {
+              "type": "data",
+              "unit": "hard class",
+              "dimensions": [
+                "y",
+                "x"
+              ],
+              "description": "data"
+            }
+          },
+          "cube:dimensions": {
+            "x": {
+              "axis": "x",
+              "type": "spatial",
+              "unit": "degree",
+              "extent": [
+                -180,
+                180
+              ],
+              "reference_system": 4326
+            },
+            "y": {
+              "axis": "y",
+              "type": "spatial",
+              "unit": "degree",
+              "extent": [
+                -60,
+                84
+              ],
+              "reference_system": 4326
+            }
+          },
+          "classification:classes": [
+            {
+              "name": "1_built_up",
+              "title": "1. Built-up",
+              "value": 1,
+              "color_hint": "D73027"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 2,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 3,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 4,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 5,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 6,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 7,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 8,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "3_grassland",
+              "title": "3. Grassland",
+              "value": 9,
+              "color_hint": "E49F2E"
+            },
+            {
+              "name": "3_grassland",
+              "title": "3. Grassland",
+              "value": 10,
+              "color_hint": "E49F2E"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 11,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 12,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 13,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 14,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 15,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 16,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 17,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 18,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 19,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 20,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 21,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 22,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 23,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 24,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "5_shrubland_and_heathland",
+              "title": "5. Shrubland and heathland",
+              "value": 25,
+              "color_hint": "E67E22"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 26,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 27,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 28,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 29,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 30,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 31,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 32,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 33,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "8_water_bodies",
+              "title": "8. Water bodies",
+              "value": 34,
+              "color_hint": "4169E1"
+            },
+            {
+              "name": "8_water_bodies",
+              "title": "8. Water bodies",
+              "value": 35,
+              "color_hint": "4169E1"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 36,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 37,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 38,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "10_aquaculture",
+              "title": "10. Aquaculture",
+              "value": 39,
+              "color_hint": "ADD8E6"
+            }
+          ]
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -180,
+              -60
+            ],
+            [
+              -180,
+              84
+            ],
+            [
+              180,
+              84
+            ],
+            [
+              180,
+              -60
+            ],
+            [
+              -180,
+              -60
+            ]
+          ]
+        ]
+      },
+      "collection": "land.cover_ifad.mcdt_go_landmetric",
+      "properties": {
+        "gsd": 30,
+        "title": "land.cover_ifad.mcdt_go_landmetric_20210101_20211231",
+        "region": "global",
+        "product": "land.cover_ifad.mcdt",
+        "version": "v1.2",
+        "datetime": "2021-01-01T00:00:00Z",
+        "proj:bbox": [
+          -180,
+          -60,
+          180,
+          84
+        ],
+        "proj:epsg": 4326,
+        "catalog_id": [
+          "landmetric"
+        ],
+        "proj:shape": [
+          576000,
+          1440000
+        ],
+        "end_datetime": "2021-12-31T00:00:00Z",
+        "proj:transform": [
+          0.0002,
+          0,
+          -180,
+          0,
+          -0.0002,
+          84,
+          0,
+          0,
+          1
+        ],
+        "start_datetime": "2021-01-01T00:00:00Z"
+      },
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+        "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+        "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+        "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/raster/v2.0.0/schema.json"
+      ],
+      "links": [
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+        },
+        {
+          "rel": "parent",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+        },
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/"
+        },
+        {
+          "rel": "self",
+          "type": "application/geo+json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric/items/land.cover_ifad.mcdt_go_landmetric_20210101_20211231"
+        }
+      ]
+    },
+    {
+      "id": "land.cover_ifad.mcdt_go_landmetric_20200101_20201231",
+      "bbox": [
+        -180,
+        -60,
+        180,
+        84
+      ],
+      "type": "Feature",
+      "title": "land.cover_ifad.mcdt_go_landmetric_20200101_20201231",
+      "assets": {
+        "thumbnail": {
+          "href": "https://titiler.opengeohub.org/cog/preview?url=https%3A%2F%2Fs3.ecodatacube.eu%2Fifad%2Fland.cover_ifad.mcdt_c_30m_s_20200101_20201231_go_epsg.4326_v1.2.tif&max_size=1200&colormap=%7B%221%22%3A%22%23d73027%22%2C%222%22%3A%22%23ffd700%22%2C%223%22%3A%22%23ffd700%22%2C%224%22%3A%22%23ffd700%22%2C%225%22%3A%22%23ffd700%22%2C%226%22%3A%22%23ffd700%22%2C%227%22%3A%22%23ffd700%22%2C%228%22%3A%22%23ffd700%22%2C%229%22%3A%22%23e49f2e%22%2C%2210%22%3A%22%23e49f2e%22%2C%2211%22%3A%22%231b9e77%22%2C%2212%22%3A%22%231b9e77%22%2C%2213%22%3A%22%231b9e77%22%2C%2214%22%3A%22%231b9e77%22%2C%2215%22%3A%22%231b9e77%22%2C%2216%22%3A%22%231b9e77%22%2C%2217%22%3A%22%231b9e77%22%2C%2218%22%3A%22%231b9e77%22%2C%2219%22%3A%22%231b9e77%22%2C%2220%22%3A%22%231b9e77%22%2C%2221%22%3A%22%231b9e77%22%2C%2222%22%3A%22%231b9e77%22%2C%2223%22%3A%22%231b9e77%22%2C%2224%22%3A%22%231b9e77%22%2C%2225%22%3A%22%23e67e22%22%2C%2226%22%3A%22%23c0a46b%22%2C%2227%22%3A%22%23c0a46b%22%2C%2228%22%3A%22%23c0a46b%22%2C%2229%22%3A%22%23c0a46b%22%2C%2230%22%3A%22%23c0a46b%22%2C%2231%22%3A%22%231abc9c%22%2C%2232%22%3A%22%231abc9c%22%2C%2233%22%3A%22%231abc9c%22%2C%2234%22%3A%22%234169e1%22%2C%2235%22%3A%22%234169e1%22%2C%2236%22%3A%22%236c5ce7%22%2C%2237%22%3A%22%236c5ce7%22%2C%2238%22%3A%22%236c5ce7%22%2C%2239%22%3A%22%23add8e6%22%7D",
+          "type": "image/png",
+          "roles": [
+            "thumbnail"
+          ],
+          "file:size": 128191,
+          "file:checksum": "d501102dd6715f7fac8a06d10d48cbcbff0e14"
+        },
+        "land.cover_ifad.mcdt_qml_1": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv1_v2.0.qml",
+          "type": "application/vnd.QGIS.qml+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 1, QGIS style",
+          "file:size": 11735,
+          "style:type": "qml",
+          "style:scale": true,
+          "file:checksum": "d5011005ca05e94eec4a25070a186556bd3906",
+          "style:variant": "default",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_qml_2": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv2_v2.0.qml",
+          "type": "application/vnd.QGIS.qml+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 2, QGIS style",
+          "file:size": 11718,
+          "style:type": "qml",
+          "style:scale": false,
+          "file:checksum": "d501107b33dacffca8a861efb8c9655759d1b1",
+          "style:variant": "alternative",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_sld_1": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv1_v2.0.sld",
+          "type": "application/vnd.OGC.sld+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 1, OGC style",
+          "file:size": 5110,
+          "style:type": "sld",
+          "style:scale": true,
+          "file:checksum": "d50110a0cced24c8f8b25b22fd7e8ee0e05a4e",
+          "style:variant": "default",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_sld_2": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_lv2_v2.0.sld",
+          "type": "application/vnd.OGC.sld+xml",
+          "roles": [
+            "style"
+          ],
+          "title": "land.cover_ifad.mcdt, level 2, OGC style",
+          "file:size": 5071,
+          "style:type": "sld",
+          "style:scale": false,
+          "file:checksum": "d5011073d9fe38e570fd66eca83e495140940a",
+          "style:variant": "alternative",
+          "style:variable": "land.cover_ifad.mcdt"
+        },
+        "land.cover_ifad.mcdt_c_30m_s": {
+          "href": "https://s3.ecodatacube.eu/ifad/land.cover_ifad.mcdt_c_30m_s_20200101_20201231_go_epsg.4326_v1.2.tif",
+          "main": true,
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "bands": [
+            {
+              "nodata": 255,
+              "data_type": "uint8",
+              "raster:scale": 1,
+              "raster:offset": 0,
+              "raster:bits_per_sample": 8,
+              "raster:spatial_resolution": 0.0002
+            }
+          ],
+          "roles": [
+            "data"
+          ],
+          "file:size": 43931539440,
+          "style:assets": [
+            "land.cover_ifad.mcdt_qml_1",
+            "land.cover_ifad.mcdt_qml_2",
+            "land.cover_ifad.mcdt_sld_1",
+            "land.cover_ifad.mcdt_sld_2"
+          ],
+          "file:checksum": "d501104eccbc679ff14052590aaf751ebc29d7",
+          "style:default": [
+            "land.cover_ifad.mcdt_qml_1",
+            "land.cover_ifad.mcdt_sld_1"
+          ],
+          "cube:variables": {
+            "data": {
+              "type": "data",
+              "unit": "hard class",
+              "dimensions": [
+                "y",
+                "x"
+              ],
+              "description": "data"
+            }
+          },
+          "cube:dimensions": {
+            "x": {
+              "axis": "x",
+              "type": "spatial",
+              "unit": "degree",
+              "extent": [
+                -180,
+                180
+              ],
+              "reference_system": 4326
+            },
+            "y": {
+              "axis": "y",
+              "type": "spatial",
+              "unit": "degree",
+              "extent": [
+                -60,
+                84
+              ],
+              "reference_system": 4326
+            }
+          },
+          "classification:classes": [
+            {
+              "name": "1_built_up",
+              "title": "1. Built-up",
+              "value": 1,
+              "color_hint": "D73027"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 2,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 3,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 4,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 5,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 6,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 7,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "2_cropland_annual_perennial",
+              "title": "2. Cropland (Annual & Perennial)",
+              "value": 8,
+              "color_hint": "FFD700"
+            },
+            {
+              "name": "3_grassland",
+              "title": "3. Grassland",
+              "value": 9,
+              "color_hint": "E49F2E"
+            },
+            {
+              "name": "3_grassland",
+              "title": "3. Grassland",
+              "value": 10,
+              "color_hint": "E49F2E"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 11,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 12,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 13,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 14,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 15,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 16,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 17,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 18,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 19,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 20,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 21,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 22,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 23,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "4_forest_forest_plantatioins_and_woodland",
+              "title": "4. Forest, forest plantatioins and woodland",
+              "value": 24,
+              "color_hint": "1B9E77"
+            },
+            {
+              "name": "5_shrubland_and_heathland",
+              "title": "5. Shrubland and heathland",
+              "value": 25,
+              "color_hint": "E67E22"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 26,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 27,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 28,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 29,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "6_sparsely_vegetated_ecosystems",
+              "title": "6. Sparsely vegetated ecosystems",
+              "value": 30,
+              "color_hint": "C0A46B"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 31,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 32,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "7_inland_wetlands",
+              "title": "7. Inland wetlands",
+              "value": 33,
+              "color_hint": "1ABC9C"
+            },
+            {
+              "name": "8_water_bodies",
+              "title": "8. Water bodies",
+              "value": 34,
+              "color_hint": "4169E1"
+            },
+            {
+              "name": "8_water_bodies",
+              "title": "8. Water bodies",
+              "value": 35,
+              "color_hint": "4169E1"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 36,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 37,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "9_coastal_ecosystems",
+              "title": "9. Coastal ecosystems",
+              "value": 38,
+              "color_hint": "6C5CE7"
+            },
+            {
+              "name": "10_aquaculture",
+              "title": "10. Aquaculture",
+              "value": 39,
+              "color_hint": "ADD8E6"
+            }
+          ]
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -180,
+              -60
+            ],
+            [
+              -180,
+              84
+            ],
+            [
+              180,
+              84
+            ],
+            [
+              180,
+              -60
+            ],
+            [
+              -180,
+              -60
+            ]
+          ]
+        ]
+      },
+      "collection": "land.cover_ifad.mcdt_go_landmetric",
+      "properties": {
+        "gsd": 30,
+        "title": "land.cover_ifad.mcdt_go_landmetric_20200101_20201231",
+        "region": "global",
+        "product": "land.cover_ifad.mcdt",
+        "version": "v1.2",
+        "datetime": "2020-01-01T00:00:00Z",
+        "proj:bbox": [
+          -180,
+          -60,
+          180,
+          84
+        ],
+        "proj:epsg": 4326,
+        "catalog_id": [
+          "landmetric"
+        ],
+        "proj:shape": [
+          576000,
+          1440000
+        ],
+        "end_datetime": "2020-12-31T00:00:00Z",
+        "proj:transform": [
+          0.0002,
+          0,
+          -180,
+          0,
+          -0.0002,
+          84,
+          0,
+          0,
+          1
+        ],
+        "start_datetime": "2020-01-01T00:00:00Z"
+      },
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+        "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+        "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+        "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/raster/v2.0.0/schema.json"
+      ],
+      "links": [
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+        },
+        {
+          "rel": "parent",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric"
+        },
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://stac.opengeohub.org/v1/"
+        },
+        {
+          "rel": "self",
+          "type": "application/geo+json",
+          "href": "https://stac.opengeohub.org/v1/collections/land.cover_ifad.mcdt_go_landmetric/items/land.cover_ifad.mcdt_go_landmetric_20200101_20201231"
+        }
+      ]
+    }
+  ],
+  "numberReturned": 5
+}
