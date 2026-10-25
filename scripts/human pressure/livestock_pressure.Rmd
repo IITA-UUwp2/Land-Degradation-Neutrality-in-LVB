@@ -1,0 +1,74 @@
+
+```{r}
+library(terra)
+
+livestock_file <- "~/SeasonalTrendsEdited/data/GPW_Livestock/LVB_GPW_livestock_2000_2022.tif"
+out_dir <- "~/SeasonalTrendsEdited/output/livestock_pressure"
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+livestock <- rast(livestock_file)
+years <- 2000:2022
+```
+
+```{r}
+# Convert cattle, goats and sheep to Tropical Livestock Units
+
+tlu_layers <- lapply(years, function(yr) {
+  cattle <- livestock[[paste0("cattle_", yr)]]
+  goat <- livestock[[paste0("goat_", yr)]]
+  sheep <- livestock[[paste0("sheep_", yr)]]
+
+  (0.7 * cattle) + (0.1 * goat) + (0.1 * sheep)
+})
+
+tlu_stack <- do.call(c, tlu_layers)
+names(tlu_stack) <- paste0("TLU_", years)
+
+cell_area_km2 <- cellSize(tlu_stack[[1]], unit = "km")
+tlu_density <- tlu_stack / cell_area_km2
+names(tlu_density) <- paste0("TLU_density_", years)
+```
+
+```{r}
+# Basin-wide livestock change
+
+tlu_total <- global(tlu_stack, "sum", na.rm = TRUE)[, 1]
+
+plot(years, tlu_total, type = "l", lwd = 2, xlab = "Year", ylab = "Tropical Livestock Units")
+```
+
+```{r}
+# Annual livestock density trend
+
+tlu_slope_fun <- function(x) {
+  ok <- is.finite(x)
+  if (sum(ok) < 15) return(NA)
+  coef(lm(x[ok] ~ years[ok]))[2]
+}
+
+tlu_slope <- app(tlu_density, tlu_slope_fun)
+names(tlu_slope) <- "TLU_density_slope_2000_2022"
+
+plot(tlu_slope)
+```
+
+```{r}
+# Direction of livestock trends
+
+v <- values(tlu_slope, mat = FALSE)
+v <- v[is.finite(v)]
+
+tlu_summary <- data.frame(
+  class = c("Decrease", "No change", "Increase"),
+  cells = c(sum(v < 0), sum(v == 0), sum(v > 0))
+)
+
+tlu_summary$percent <- 100 * tlu_summary$cells / sum(tlu_summary$cells)
+
+tlu_summary
+```
+
+```{r}
+writeRaster(tlu_slope, file.path(out_dir, "TLU_density_annual_slope_2000_2022.tif"), overwrite = TRUE)
+```
+````
